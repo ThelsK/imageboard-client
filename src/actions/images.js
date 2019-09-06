@@ -19,9 +19,10 @@ export const getImages = () => (dispatch, getState) => {
     .catch(console.error)
 }
 
-export const createImage = data => dispatch => {
-  console.log("Data:", data)
-  request.post(`${baseUrl}/image`).send(data)
+export const createImage = data => (dispatch, getState) => {
+  request.post(`${baseUrl}/image`)
+    .set("Authorization", `Bearer ${getState().user}`)
+    .send(data)
     .then(res => {
       dispatch({
         type: NEW_IMAGE,

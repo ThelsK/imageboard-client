@@ -1,35 +1,35 @@
 import React from "react"
 
-class CreateForm extends React.Component {
+class LoginForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.props.onSubmit}>
         <label>
-          Image Title:
+          Email Address:
           <input
-            name="title"
+            name="email"
             type="text"
             value={this.props.values.title}
-            placeholder="Enter a title..."
+            placeholder="Enter your email..."
             onChange={this.props.onChange}
           />
         </label>
         <label>
-          Image URL:
+          Password:
           <input
-            name="url"
+            name="password"
             type="text"
             value={this.props.values.url}
-            placeholder="Enter a URL..."
+            placeholder="Enter your password..."
             onChange={this.props.onChange}
           />
         </label>
         <button>
-          Add
+          Login
         </button>
       </form>
     )
   }
 }
 
-export default CreateForm
+export default LoginForm
