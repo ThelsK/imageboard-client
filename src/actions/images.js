@@ -1,5 +1,5 @@
 import request from "superagent"
-const baseUrl = "http://localhost:4000"
+const baseUrl = "https://vast-escarpment-21536.herokuapp.com"
 
 export const ALL_IMAGES = "ALL_IMAGES"
 export const NEW_IMAGE = "NEW_IMAGE"
